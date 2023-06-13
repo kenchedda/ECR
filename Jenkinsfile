@@ -117,7 +117,21 @@ pipeline {
                 }
             }
         }
+
+             stage('Connect to EKS '){
             
+        steps{
+
+            script{
+
+                sh """
+                
+                
+                aws eks --region=us-east-1 update-kubeconfig --name=ed-eks-01
+                """
+            }
+        }
+        }  
     }
 
 }    
