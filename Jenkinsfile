@@ -107,13 +107,13 @@ pipeline {
                 steps{
                   script{
 
-                    dir('eks_module') {
+                  
                       sh """
                           
                           terraform init 
-                          terraform apply --var-file=./config/terraform.tfvars --auto-approve
+                          terraform apply --auto-approve
                       """
-                  }
+                  
                 }
             }
         }
