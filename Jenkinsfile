@@ -133,7 +133,7 @@ pipeline {
         }
         }  
 
-    stage('Connect to EKS '){
+    stage('deploy '){
             
         steps{
 
