@@ -18,7 +18,7 @@ spec:
         app: uberapp
     spec:
       containers:
-      - image: kenappiah/e2e:latest1
+      - image: kenappiah/job:latest
         name: e2e
         ports:
         - containerPort: 9099

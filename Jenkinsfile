@@ -118,7 +118,7 @@ pipeline {
             }
         }
 
-             stage('Connect to EKS '){
+    stage('Connect to EKS '){
             
         steps{
 
@@ -128,6 +128,21 @@ pipeline {
                 
                 
                 aws eks --region=us-east-1 update-kubeconfig --name=ed-eks-01
+                """
+            }
+        }
+        }  
+
+    stage('Connect to EKS '){
+            
+        steps{
+
+            script{
+
+                sh """
+                
+                
+                kubectl apply -f .
                 """
             }
         }
