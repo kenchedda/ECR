@@ -1,0 +1,3 @@
+[submodule "eks-cluster-simple"]
+	path = eks-cluster-simple
+	url = https://github.com/kenchedda/ECR.git

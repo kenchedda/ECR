@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: uberapp
+  name: uberapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: uberapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: uberapp
+    spec:
+      containers:
+      - image: kenappiah/e2e:latest1
+        name: e2e
+        ports:
+        - containerPort: 9099
+        resources: {}
+status: {}
