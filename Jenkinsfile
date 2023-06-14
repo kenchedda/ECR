@@ -126,7 +126,6 @@ pipeline {
 
                 sh """
                 
-                
                 aws eks --region=us-east-1 update-kubeconfig --name=ed-eks-01
                 """
             }
@@ -147,7 +146,22 @@ pipeline {
                 """
             }
         }
-        }  
+        } 
+
+         stage('Create EKS Cluster : Terraform'){
+                steps{
+                  script{
+
+                  
+                      sh """
+                          
+                          terraform 
+                          terraform destroy --auto-approve
+                      """
+                  
+                }
+            }
+        }
     }
 
 }    
