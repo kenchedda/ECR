@@ -155,7 +155,7 @@ pipeline {
                   
                       sh """
                           
-                          terraform 
+                         
                           terraform destroy --auto-approve
                       """
                   
