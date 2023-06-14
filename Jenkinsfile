@@ -148,7 +148,7 @@ pipeline {
         }
         } 
 
-         stage('Create EKS Cluster : Terraform'){
+         stage('destroy EKS Cluster : Terraform'){
                 steps{
                   script{
 
