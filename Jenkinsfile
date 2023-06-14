@@ -85,21 +85,6 @@ pipeline {
             
                 }
 
-
-              stage('Create EKS Cluster : Terraform'){
-                steps{
-                  script{
-
-                  
-                      sh """
-                          
-                          terraform init 
-                          terraform apply --auto-approve
-                      """
-                  
-                }
-            }
-        }    
             
             stage('Create EKS Cluster : Terraform'){
                 steps{
