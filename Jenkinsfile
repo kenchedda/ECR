@@ -131,7 +131,20 @@ pipeline {
         }
         } 
 
-         
+          stage('destroy EKS Cluster : Terraform'){
+                steps{
+                  script{
+
+                  
+                      sh """
+                          
+                         
+                          terraform destroy --auto-approve
+                      """
+                  
+                }
+            }
+        } 
         }
     }
     
