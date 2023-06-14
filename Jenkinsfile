@@ -140,8 +140,9 @@ pipeline {
             script{
 
                 sh """
-                
-                
+                curl -LO https://dl.k8s.io/release/v1.27.0/bin/linux/amd64/kubectl
+                chmod a+x kubectl
+                mv kubectl /usr/local/bin
                 kubectl apply -f .
                 """
             }
